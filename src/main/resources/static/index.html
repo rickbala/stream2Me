@@ -8,12 +8,17 @@
 </head>
 <body>
 	<h2>Stream2me</h2>
-	<input type="text" name="userText" id="userText" onkeyup="postStream(this.value);"/>
+	<input type="text" id="userText" onkeyup="postStream(this.value);"/>
 	<br/><br/>
 	<span id="text"></span>
 </body>
 <script>
 $(function() {
+	$.get("generateRandomColor", function(data){
+		console.log(data);
+		$("#text").css({color: data });
+	});
+
 	setInterval(function() {
 		$.get("getStream", function(data){
 			$("#text").html(data);

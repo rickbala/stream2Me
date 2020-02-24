@@ -32,4 +32,10 @@ public class StreamController {
 		text = text + var;
 	}
 
+	@GetMapping("/generateRandomColor")
+	@ResponseBody
+	public String generateRandomColor(){
+		return Utils.generateRandomRGBColor();
+	}
+
 }

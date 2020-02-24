@@ -16,4 +16,11 @@ public class Utils {
         return (char)getRandomNumberInRange(65,90);
     }
 
+    public static String generateRandomRGBColor(){
+        int red = getRandomNumberInRange(0,255);
+        int green = getRandomNumberInRange(0,255);
+        int blue = getRandomNumberInRange(0,255);
+        return "rgb(" + red + "," + green + "," + blue + ")";
+    }
+
 }
