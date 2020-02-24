@@ -7,22 +7,15 @@
 	<meta content="utf-8" http-equiv="encoding">
 </head>
 <body>
-	<h2>Stream2me</h2>
-	<input type="text" name="userText" id="userText" onkeyup="postStream(this.value);"/>
-	<br/><br/>
+	<h2>Decypher this!</h2>
 	<span id="text"></span>
 </body>
 <script>
 $(function() {
 	setInterval(function() {
-		$.get("getStream", function(data){
+		$.get("decypher", function(data){
 			$("#text").html(data);
 		});
 	}, 100);
 });
-function postStream(value){
-	var toSend = value;
-	$("#userText").val('');
-	$.get("postStream?var=" + toSend);
-}
 </script>
