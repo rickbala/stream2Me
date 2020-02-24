@@ -10,7 +10,8 @@
 	</parent>
 	<groupId>com.rickbala</groupId>
 	<artifactId>stream2me</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.6.0</version>
+	<!--<packaging>war</packaging>-->
 	<name>stream2me</name>
 	<description>Front-end and back-end synchronization.</description>
 

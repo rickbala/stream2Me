@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @Controller
 public class StreamController {
 
-	private static String text = "sou um texto do backend";
+	private static String text = "Chat: ";
 
 	@GetMapping("/decypher")
 	@ResponseBody
@@ -29,9 +29,7 @@ public class StreamController {
 	@GetMapping("/postStream")
 	@ResponseBody
 	public void postStream(@RequestParam String var){
-		System.out.println("chegou algo para postar=" + var);
 		text = text + var;
-
 	}
 
 }
