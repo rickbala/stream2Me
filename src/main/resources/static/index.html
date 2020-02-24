@@ -13,20 +13,19 @@
 	<span id="text"></span>
 </body>
 <script>
+var myColor;
 $(function() {
 	$.get("generateRandomColor", function(data){
-		console.log(data);
-		$("#text").css({color: data });
+		myColor = data;
 	});
-
 	setInterval(function() {
 		$.get("getStream", function(data){
 			$("#text").html(data);
 		});
-	}, 100);
+	}, 200);
 });
 function postStream(value){
-	var toSend = value;
+	var toSend = "<span style='color: " + myColor + "'>"+ value + "</span>";
 	$("#userText").val('');
 	$.get("postStream?var=" + toSend);
 }
